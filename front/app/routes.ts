@@ -12,6 +12,9 @@ export default [
     route("a-propos", "routes/a-propos.tsx"),
     route("contact", "routes/contact.tsx"),
     route("ressources", "routes/ressources.tsx"),
+
+    // API Routes
+    route("api/subscribe-newsletter", "routes/api/subscribe-newsletter.ts"),
     route("*", "routes/error.tsx"),
   ]),
 ] satisfies RouteConfig;
