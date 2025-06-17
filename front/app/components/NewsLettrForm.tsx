@@ -92,7 +92,7 @@ export function SimpleNewsletterForm({ className = "" }) {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="votre@email.com"
               disabled={loading}
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 disabled:opacity-50 disabled:cursor-not-allowed text-black"
             />
             <button
               type="submit"
@@ -228,7 +228,7 @@ export function CompactNewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         disabled={loading}
-        className="flex-1 px-2 py-1 text-sm border rounded focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50"
+        className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 text-black"
         required
       />
       <button
