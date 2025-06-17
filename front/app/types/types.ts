@@ -1,0 +1,30 @@
+export type EmailAddress = string;
+
+export interface Email {
+  from: EmailAddress;
+  to: EmailAddress | EmailAddress[];
+  subject: string;
+  body: string;
+  cc?: EmailAddress | EmailAddress[];
+  bcc?: EmailAddress | EmailAddress[];
+  attachments?: string[];
+  sentAt?: Date;
+}
+
+export interface EmailParams {
+  to: string | string[];
+  subject: string;
+  html?: string;
+  text?: string;
+}
+
+export interface ApiResponse {
+  success: boolean;
+  message?: string;
+  error?: string;
+}
+
+export interface Message {
+  type: "success" | "error" | "";
+  text: string;
+}
