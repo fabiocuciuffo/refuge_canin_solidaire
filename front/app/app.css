@@ -145,3 +145,11 @@
 .text-light {
   font-weight: 300;
 }
+
+.svg_background {
+  background-image: url('/path/to/image.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
