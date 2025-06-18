@@ -158,27 +158,27 @@
 }
 
 .text-beige {
-  color: #ecfdf3;
+  color: #fbf7ef;
 }
 
 .text-green {
-  color: #b42318;
+  color: #10ad5e;
 }
 
 .text-blue {
-  color: #027a48;
+  color: #617ed2;
 }
 
 .text-red {
-  color: #fef3f2;
+  color: #ff7664;
 }
 
 .text-dark {
-  color: #000000;
+  color: #151516;
 }
 
 .text-yellow {
-  color: #fecf3f;
+  color: #fed55f;
 }
 
 .bg-white-custom {
@@ -186,31 +186,31 @@
 }
 
 .bg-beige {
-  background-color: #ecfdf3;
+  background-color: #fbf7ef;
 }
 
 .bg-green {
-  background-color: #b42318;
+  background-color: #10ad5e;
 }
 
 .bg-blue {
-  background-color: #027a48;
+  background-color: #617ed2;
 }
 
 .bg-red {
-  background-color: #fef3f2;
+  background-color: #ff7664;
 }
 
 .bg-dark {
-  background-color: #000000;
+  background-color: #151516;
 }
 
 .bg-yellow {
-  background-color: #fecf3f;
+  background-color: #fed55f;
 }
 
 .svg_background {
-  background-image: url("/front//public/assets/graphic-assets/Vector-underline.png");
+  background-image: url("/public/assets/graphic-assets/Vector-underline.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
