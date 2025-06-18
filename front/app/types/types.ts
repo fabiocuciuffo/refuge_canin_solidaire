@@ -28,3 +28,11 @@ export interface Message {
   type: "success" | "error" | "";
   text: string;
 }
+
+export type BenevolatRequest = {
+  name: string;
+  firstName: string;
+  address: string;
+  email: string;
+  motivation: string;
+};

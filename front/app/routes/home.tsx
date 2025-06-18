@@ -1,8 +1,9 @@
 import type { MetaArgs } from "react-router";
-import {
-  CompactNewsletterForm,
-  SimpleNewsletterForm,
-} from "~/components/NewsLettrForm";
+// import {
+//   CompactNewsletterForm,
+//   SimpleNewsletterForm,
+// } from "~/components/NewsLettrForm";
+import { BenevolatForm } from "~/components/BenevolatSubmitForm";
 
 export function meta({}: MetaArgs) {
   return [
@@ -23,12 +24,16 @@ export default function Home() {
         </p>
 
         <div className="w-full max-w-md mb-8">
+          <BenevolatForm />
+        </div>
+
+        {/* <div className="w-full max-w-md mb-8">
           <SimpleNewsletterForm />
         </div>
 
         <div className="w-full max-w-md mb-8">
           <CompactNewsletterForm />
-        </div>
+        </div> */}
       </main>
     </div>
   );

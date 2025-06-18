@@ -15,6 +15,7 @@ export default [
 
     // API Routes
     route("api/subscribe-newsletter", "routes/api/subscribe-newsletter.ts"),
+    route("api/submit-benevolat", "routes/api/submit-benevolat.ts"),
     route("*", "routes/error.tsx"),
   ]),
 ] satisfies RouteConfig;
