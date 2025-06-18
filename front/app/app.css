@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "DM Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 :root {
@@ -10,16 +11,16 @@
 }
 
 @font-face {
-  font-family: 'Marina Sikona';
-  src: url('/fonts/MarineSikona.otf') format('opentype');
+  font-family: "Marina Sikona";
+  src: url("/fonts/MarineSikona.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: url('/fonts/DMSans.ttf') format('truetype');
+  font-family: "DM Sans";
+  src: url("/fonts/DMSans.ttf") format("truetype");
   font-weight: 100 900;
   /* Supports the full weight range */
   font-style: normal;
@@ -27,37 +28,37 @@
 }
 
 .title1 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 2rem;
   line-height: 130%;
 }
 
 .title2 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 1.75rem;
   line-height: 120%;
 }
 
 .title3 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 1.5rem;
   line-height: 120%;
 }
 
 .title4 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 1.25rem;
   line-height: 140%;
 }
 
 .title5 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 1.125rem;
   line-height: 140%;
 }
 
 .title6 {
-  font-family: 'Marina Sikona', serif;
+  font-family: "Marina Sikona", serif;
   font-size: 1rem;
   line-height: 140%;
 }
@@ -65,37 +66,37 @@
 /* Desktop variants */
 @media (min-width: 768px) {
   .title1 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 5rem;
     line-height: 100%;
   }
 
   .title2 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 3rem;
     line-height: 120%;
   }
 
   .title3 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 2.5rem;
     line-height: 120%;
   }
 
   .title4 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 2rem;
     line-height: 130%;
   }
 
   .title5 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 1.5rem;
     line-height: 140%;
   }
 
   .title6 {
-    font-family: 'Marina Sikona', serif;
+    font-family: "Marina Sikona", serif;
     font-size: 1.25rem;
     line-height: 140%;
   }
@@ -153,23 +154,23 @@
 }
 
 .text-white-custom {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text-beige {
-  color: #ECFDF3;
+  color: #ecfdf3;
 }
 
 .text-green {
-  color: #B42318;
+  color: #b42318;
 }
 
 .text-blue {
-  color: #027A48;
+  color: #027a48;
 }
 
 .text-red {
-  color: #FEF3F2;
+  color: #fef3f2;
 }
 
 .text-dark {
@@ -177,27 +178,27 @@
 }
 
 .text-yellow {
-  color: #FECF3F;
+  color: #fecf3f;
 }
 
 .bg-white-custom {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .bg-beige {
-  background-color: #ECFDF3;
+  background-color: #ecfdf3;
 }
 
 .bg-green {
-  background-color: #B42318;
+  background-color: #b42318;
 }
 
 .bg-blue {
-  background-color: #027A48;
+  background-color: #027a48;
 }
 
 .bg-red {
-  background-color: #FEF3F2;
+  background-color: #fef3f2;
 }
 
 .bg-dark {
@@ -205,11 +206,11 @@
 }
 
 .bg-yellow {
-  background-color: #FECF3F;
+  background-color: #fecf3f;
 }
 
 .svg_background {
-  background-image: url('/path/to/image.svg');
+  background-image: url("/front//public/assets/graphic-assets/Vector-underline.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
