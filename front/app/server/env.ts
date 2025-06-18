@@ -6,6 +6,7 @@ const sanityToken = process.env.SANITY_TOKEN;
 const gmailUser = process.env.GMAIL_USER;
 const gmailPassword = process.env.GMAIL_PASSWORD;
 const emailFrom = process.env.EMAIL_FROM;
+const viewerToken = process.env.REACT_APP_SANITY_VIEWER_TOKEN
 
 export {
   sanityId,
@@ -14,4 +15,5 @@ export {
   gmailUser,
   gmailPassword,
   emailFrom,
+  viewerToken,
 };
