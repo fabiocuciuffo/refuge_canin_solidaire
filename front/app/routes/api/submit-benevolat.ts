@@ -16,6 +16,7 @@ export async function action({ request }: ActionFunctionArgs) {
     const formData = await request.formData();
     const nom = formData.get("nom") as string;
     const prenom = formData.get("prenom") as string;
+    const role = formData.get("role") as string;
     const adresse = formData.get("adresse") as string;
     const email = formData.get("email") as string;
     const motivation = formData.get("motivation") as string;
@@ -38,6 +39,7 @@ export async function action({ request }: ActionFunctionArgs) {
     await benevolatService.submitRequest({
       name: nom,
       firstName: prenom,
+      role: role,
       address: adresse,
       email,
       motivation,
@@ -63,6 +65,7 @@ export async function action({ request }: ActionFunctionArgs) {
       <ul>
         <li><strong>Nom :</strong> ${nom}</li>
         <li><strong>Prénom :</strong> ${prenom}</li>
+        <li><strong>Rôle :</strong> ${role}</li>
         <li><strong>Adresse :</strong> ${adresse}</li>
         <li><strong>Email :</strong> ${email}</li>
         <li><strong>Motivation :</strong> ${motivation}</li>

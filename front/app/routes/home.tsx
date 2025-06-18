@@ -1,4 +1,5 @@
 import type { MetaArgs } from "react-router";
+import { BenevolatForm } from "~/components/BenevolatSubmitForm";
 
 export function meta({}: MetaArgs) {
   return [
@@ -17,6 +18,8 @@ export default function Home() {
         <p className="text-lg text-gray-600 mb-8 text-center">
           Un lieu d’accueil et d’amour pour nos amis à quatre pattes.
         </p>
+
+        <BenevolatForm />
       </main>
     </div>
   );
