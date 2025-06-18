@@ -18,7 +18,7 @@ export default function HeroBanner() {
             approche solidaire, éducative et éco-responsable, redéfinissant
             ainsi le rôle d'un refuge pour chiens.
           </p>
-          <button className="relative overflow-hidden bg-white text-regular text-black rounded-[12px] py-4 md:w-full text-[1.2rem] font-bold cursor-pointer mb-6 w-full md:max-w-xs md:py-6 transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] before:transition-transform before:duration-700 hover:before:translate-x-[100%]">
+          <button className="relative overflow-hidden bg-white text-regular text-dark rounded-[12px] py-4 md:w-full text-[1.2rem] font-bold cursor-pointer mb-6 w-full md:max-w-xs md:py-6 transform transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-100%] before:transition-transform before:duration-700 hover:before:translate-x-[100%]">
             <span className="relative z-10">
               <a href="">Faire un don</a>
             </span>
