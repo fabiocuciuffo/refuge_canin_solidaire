@@ -37,3 +37,20 @@ export type BenevolatRequest = {
   email: string;
   motivation: string;
 };
+
+export type BannerProps = {
+  title: {
+    text: string;
+    highlightedText?: string;
+  };
+  description: string;
+  button: {
+    text: string;
+    href: string;
+  };
+  image: {
+    src: string;
+    alt: string;
+  };
+  backgroundClass?: string;
+};
