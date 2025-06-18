@@ -71,7 +71,7 @@ const MenuNavigation = () => {
   }
 
   return (
-    <nav className="fixed justify-between md:items-center w-full h-fit flex py-2 px-4 bg-white">
+    <nav className="sticky top-0 left-0 justify-between md:items-center w-full h-fit flex py-5 px-4 bg-white z-50">
       <div className="relative flex justify-between md:hidden w-full z-50">
         <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
         <div className="inline-flex">
