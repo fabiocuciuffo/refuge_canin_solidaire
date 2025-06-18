@@ -1,5 +1,14 @@
 import {defineField, defineType} from 'sanity'
 
+export const category = [
+  {title: 'Adoption', value: 'Adoption'},
+  {title: 'Education', value: 'Education'},
+  {title: 'Le Refuge', value: 'Le Refuge'},
+  {title: 'Sensibilisation', value: 'Sensibilisation'},
+  {title: 'Événements', value: 'Événements'},
+  {title: 'Vie sociale', value: 'Vie sociale'},
+]
+
 export const postsType = defineType({
   name: 'posts',
   title: 'Posts',
@@ -8,6 +17,15 @@ export const postsType = defineType({
     defineField({
       name: 'title',
       type: 'string',
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: 'category',
+      type: 'string',
+      options: {
+        list: category.map(({title, value}) => ({title, value})),
+        layout: 'dropdown',
+      },
       validation: (rule) => rule.required(),
     }),
     defineField({
