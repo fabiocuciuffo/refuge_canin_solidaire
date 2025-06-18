@@ -2,6 +2,7 @@ import type { MetaArgs } from "react-router";
 import headerDog from "~/../public/assets/graphic-assets/header-dog.png";
 import Banner from "../components/Banner";
 import Triptique from "../components/Triptique";
+import Button from "~/components/Button";
 
 export function meta({}: MetaArgs) {
   return [
@@ -11,7 +12,7 @@ export function meta({}: MetaArgs) {
 }
 
 export default function Home() {
-  const triptiqueData: [
+  const statistiquesData: [
     { title: string; description: string },
     { title: string; description: string },
     { title: string; description: string },
@@ -29,6 +30,31 @@ export default function Home() {
       title: "= 1465",
       description:
         "En Gironde, la SPA de Bordeaux et du Sud-Ouest a accueilli 1 465 animaux abandonnés en 2022, un chiffre en constante augmentation.",
+    },
+  ];
+
+  const faireUnDonData: [
+    { title: string; subtitle?: string; description: string },
+    { title: string; subtitle?: string; description: string },
+    { title: string; subtitle?: string; description: string },
+  ] = [
+    {
+      title: "01",
+      subtitle: "Choisissez le type de don",
+      description:
+        "Ponctuel ou mensuel, petit ou grand, chaque don a un impact. Vous pouvez nous soutenir une fois, ou rejoindre notre cercle de donateurs réguliers pour accompagner le refuge dans la durée. Quel que soit votre choix, vous contribuez directement à offrir une seconde chance à nos chiens.",
+    },
+    {
+      title: "02",
+      subtitle: "Remplissez le formulaire",
+      description:
+        "En quelques clics, vous indiquez le montant, vos coordonnées et votre préférence de paiement. sNotre formulaire est entièrement sécurisé, et vous avez même la possibilité de dédier votre don à un chien en particulier ou à une action précise (sauvetage, soins, alimentation). sC’est simple, rapide, et totalement transparent.",
+    },
+    {
+      title: "03",
+      subtitle: "Valider et recevez votre reçu",
+      description:
+        "Une fois le paiement validé, vous recevez automatiquement un e-mail de confirmation avec votre reçu fiscal (si applicable). Mais surtout, vous faites désormais partie de celles et ceux qui rendent ce projet possible.",
     },
   ];
 
@@ -52,7 +78,7 @@ export default function Home() {
       <Triptique
         title="Quelques"
         highlight="statistiques clés"
-        cards={triptiqueData}
+        cards={statistiquesData}
         backgroundColor="bg-beige"
         cardBackgroundColor="bg-blue"
         titleColor="text-dark"
@@ -60,6 +86,27 @@ export default function Home() {
         cardTitleColor="text-white-custom"
         cardTextColor="text-beige"
       />
+      <div className="flex flex-col items-center justify-center gap-8 p-4">
+        <Triptique
+          title="Faire un don pour"
+          highlight="sauver une vie"
+          cards={faireUnDonData}
+          backgroundColor=""
+          cardBackgroundColor="bg-beige"
+          titleColor="text-dark"
+          cardTitleSize="title2"
+          cardSubtitleeSize="title5"
+          cardTitleColor="text-red"
+          cardSubtitleColor="text-dark"
+          cardTextColor="text-dark"
+        />
+        <Button
+          className="bg-blue whitespace-nowrap w-fit! px-6 text-white"
+          link=""
+        >
+          Faire un don
+        </Button>
+      </div>
     </main>
   );
 }

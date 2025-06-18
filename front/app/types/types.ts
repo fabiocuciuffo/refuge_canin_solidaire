@@ -70,6 +70,8 @@ export type TriptiqueProps = {
   titleColor?: string;
   textColor?: string;
   cardTitleSize?: string;
+  cardSubtitleeSize?: string;
   cardTitleColor?: string;
+  cardSubtitleColor?: string;
   cardTextColor?: string;
 };

@@ -8,7 +8,9 @@ export default function Triptique({
   cardBackgroundColor = "bg-beige",
   titleColor = "text-dark",
   cardTitleSize,
+  cardSubtitleeSize = "title4",
   cardTitleColor = "text-dark",
+  cardSubtitleColor = "text-dark",
   cardTextColor = "text-dark",
 }: TriptiqueProps) {
   return (
@@ -32,7 +34,9 @@ export default function Triptique({
                 </h2>
 
                 {card.subtitle && (
-                  <h3 className={`title4 ${cardTitleColor} mb-6`}>
+                  <h3
+                    className={`${cardSubtitleeSize} ${cardSubtitleColor} mb-6`}
+                  >
                     {card.subtitle}
                   </h3>
                 )}
