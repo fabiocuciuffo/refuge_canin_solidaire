@@ -77,63 +77,89 @@ export function BenevolatForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="benevolat-form text-black flex flex-col gap-4"
+      className="benevolat-form max-w-lg mx-auto bg-gradient-to-br shadow-2xl rounded-3xl p-8 flex flex-col gap-4 justify-center text-center border-4 border-white"
     >
-      <h2>Demande de Bénévolat</h2>
-      <div className="form-group flex gap-4">
-        <label>Nom</label>
+      <h2 className="text-3xl font-extrabold mb-4 text-blue-700 drop-shadow-lg tracking-wide">
+        Demande de Bénévolat
+      </h2>
+
+      <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Nom</label>
         <input
-          className="border border-gray-300 rounded"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
           type="text"
           value={nom}
           onChange={(e) => setNom(e.target.value)}
           required
+          placeholder="Ton nom"
         />
       </div>
-      <div className="form-group flex gap-4">
-        <label>Prénom</label>
+
+      <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Prénom</label>
         <input
-          className="border border-gray-300 rounded"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
           type="text"
           value={prenom}
           onChange={(e) => setPrenom(e.target.value)}
           required
+          placeholder="Ton prénom"
         />
       </div>
-      <div className="form-group flex gap-4">
-        <label>Adresse</label>
+
+      <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Adresse</label>
         <input
-          className="border border-gray-300 rounded"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
           type="text"
           value={adresse}
           onChange={(e) => setAdresse(e.target.value)}
           required
+          placeholder="Ton adresse"
         />
       </div>
-      <div className="form-group flex gap-4">
-        <label>Email</label>
+
+      <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Email</label>
         <input
-          className="border border-gray-300 rounded"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          placeholder="Ton email"
         />
       </div>
-      <div className="form-group flex gap-4">
-        <label>Motivations</label>
+
+      <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Motivations</label>
         <textarea
-          className="border border-gray-300 rounded"
+          className="border-2 border-blue-300 rounded-2xl px-3 py-2 min-h-[80px] focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg resize-none"
           value={motivation}
           onChange={(e) => setMotivation(e.target.value)}
           required
+          placeholder="Dis-nous pourquoi tu veux aider !"
         />
       </div>
-      <button type="submit" disabled={loading}>
-        {loading ? "Envoi..." : "Envoyer"}
+
+      <button
+        type="submit"
+        disabled={loading}
+        className="bg-gradient-to-r hover:to-blue-300 text-blue-700 font-extrabold py-4 rounded-full shadow-lg transition-all duration-300 text-lg tracking-wider hover:scale-105 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
+      >
+        {loading ? "Envoi..." : "Devenir Bénévole"}
       </button>
+
       {message.text && (
-        <div className={`message ${message.type}`}>{message.text}</div>
+        <div
+          className={`message mt-4 px-4 py-2 rounded-2xl font-semibold shadow ${
+            message.type === "success"
+              ? "bg-green-200 text-green-800"
+              : "bg-red-200 text-red-800"
+          }`}
+        >
+          {message.text}
+        </div>
       )}
     </form>
   );
