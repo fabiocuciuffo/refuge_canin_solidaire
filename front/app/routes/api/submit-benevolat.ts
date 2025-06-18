@@ -2,12 +2,13 @@ import type { ActionFunctionArgs } from "react-router";
 import { sendEmail } from "../../services/emailService";
 import { benevolatService } from "../../services/submit-benevolat";
 import { gmailUser } from "~/server/env";
+import { headerContentTypeJson } from "../../utils/constants";
 
 export async function action({ request }: ActionFunctionArgs) {
   if (request.method !== "POST") {
     return new Response(JSON.stringify({ error: "Méthode non autorisée" }), {
       status: 405,
-      headers: { "Content-Type": "application/json" },
+      headers: headerContentTypeJson,
     });
   }
 
@@ -22,7 +23,7 @@ export async function action({ request }: ActionFunctionArgs) {
     if (!nom || !prenom || !adresse || !email || !motivation) {
       return new Response(
         JSON.stringify({ error: "Tous les champs sont requis" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
+        { status: 400, headers: headerContentTypeJson }
       );
     }
 
@@ -30,7 +31,7 @@ export async function action({ request }: ActionFunctionArgs) {
     if (!emailRegex.test(email)) {
       return new Response(
         JSON.stringify({ error: "Format d'email invalide" }),
-        { status: 400, headers: { "Content-Type": "application/json" } }
+        { status: 400, headers: headerContentTypeJson }
       );
     }
 
@@ -79,7 +80,7 @@ export async function action({ request }: ActionFunctionArgs) {
         success: true,
         message: "Votre demande a été soumise avec succès.",
       }),
-      { status: 200, headers: { "Content-Type": "application/json" } }
+      { status: 200, headers: headerContentTypeJson }
     );
   } catch (error) {
     return new Response(
@@ -89,7 +90,7 @@ export async function action({ request }: ActionFunctionArgs) {
             ? error.message
             : "Une erreur est survenue. Veuillez réessayer.",
       }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+      { status: 500, headers: headerContentTypeJson }
     );
   }
 }
