@@ -3,6 +3,7 @@ import React, { useState } from "react";
 export function BenevolatForm() {
   const [nom, setNom] = useState("");
   const [prenom, setPrenom] = useState("");
+  const [role, setRole] = useState("");
   const [adresse, setAdresse] = useState("");
   const [email, setEmail] = useState("");
   const [motivation, setMotivation] = useState("");
@@ -13,7 +14,7 @@ export function BenevolatForm() {
     e.preventDefault();
     setMessage({ type: "", text: "" });
 
-    if (!nom || !prenom || !adresse || !email || !motivation) {
+    if (!nom || !prenom || !role || !adresse || !email || !motivation) {
       setMessage({
         type: "error",
         text: "Tous les champs sont requis.",
@@ -37,6 +38,7 @@ export function BenevolatForm() {
       formData.append("nom", nom);
       formData.append("prenom", prenom);
       formData.append("adresse", adresse);
+      formData.append("role", role);
       formData.append("email", email);
       formData.append("motivation", motivation);
 
@@ -54,6 +56,7 @@ export function BenevolatForm() {
         });
         setNom("");
         setPrenom("");
+        setRole("");
         setAdresse("");
         setEmail("");
         setMotivation("");
@@ -86,7 +89,7 @@ export function BenevolatForm() {
       <div className="form-group flex flex-col gap-1 text-left">
         <label className="mb-1 font-semibold text-blue-700">Nom</label>
         <input
-          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg text-black"
           type="text"
           value={nom}
           onChange={(e) => setNom(e.target.value)}
@@ -98,7 +101,7 @@ export function BenevolatForm() {
       <div className="form-group flex flex-col gap-1 text-left">
         <label className="mb-1 font-semibold text-blue-700">Prénom</label>
         <input
-          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg text-black"
           type="text"
           value={prenom}
           onChange={(e) => setPrenom(e.target.value)}
@@ -108,9 +111,31 @@ export function BenevolatForm() {
       </div>
 
       <div className="form-group flex flex-col gap-1 text-left">
+        <label className="mb-1 font-semibold text-blue-700">Rôle</label>
+        <select
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg text-black"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        >
+          <option value="Bénévoles sur le terrain">
+            Bénévoles sur le terrain
+          </option>
+          <option value="Bénévoles créatifs et communicants">
+            Bénévoles créatifs et communicants
+          </option>
+          <option value="Bénévoles pour la logistique et les événements">
+            Bénévoles pour la logistique et les événements
+          </option>
+          <option value="Bénévoles « soutien humain »">
+            Bénévoles « soutien humain »
+          </option>
+        </select>
+      </div>
+
+      <div className="form-group flex flex-col gap-1 text-left">
         <label className="mb-1 font-semibold text-blue-700">Adresse</label>
         <input
-          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg text-black"
           type="text"
           value={adresse}
           onChange={(e) => setAdresse(e.target.value)}
@@ -122,7 +147,7 @@ export function BenevolatForm() {
       <div className="form-group flex flex-col gap-1 text-left">
         <label className="mb-1 font-semibold text-blue-700">Email</label>
         <input
-          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg"
+          className="border-2 border-blue-300 rounded-full px-3 py-2 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg text-black"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -134,7 +159,7 @@ export function BenevolatForm() {
       <div className="form-group flex flex-col gap-1 text-left">
         <label className="mb-1 font-semibold text-blue-700">Motivations</label>
         <textarea
-          className="border-2 border-blue-300 rounded-2xl px-3 py-2 min-h-[80px] focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg resize-none"
+          className="border-2 border-blue-300 rounded-2xl px-3 py-2 min-h-[80px] focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300 bg-white/80 text-lg resize-none text-black"
           value={motivation}
           onChange={(e) => setMotivation(e.target.value)}
           required
@@ -145,7 +170,7 @@ export function BenevolatForm() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-gradient-to-r hover:to-blue-300 text-blue-700 font-extrabold py-4 rounded-full shadow-lg transition-all duration-300 text-lg tracking-wider hover:scale-105 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
+        className="bg-gradient-to-r hover:to-blue-300 text-blue-700 font-extrabold py-4 rounded-full shadow-lg transition-all duration-300 text-lg tracking-wider hover:scale-105 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed "
       >
         {loading ? "Envoi..." : "Devenir Bénévole"}
       </button>

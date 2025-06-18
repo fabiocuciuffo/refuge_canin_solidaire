@@ -8,6 +8,7 @@ export const benevolatService = {
         _type: "benevolatRequest",
         name: requestData.name,
         firstName: requestData.firstName,
+        role: requestData.role,
         address: requestData.address,
         email: requestData.email,
         motivation: requestData.motivation,

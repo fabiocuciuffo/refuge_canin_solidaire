@@ -32,6 +32,7 @@ export interface Message {
 export type BenevolatRequest = {
   name: string;
   firstName: string;
+  role: string;
   address: string;
   email: string;
   motivation: string;
