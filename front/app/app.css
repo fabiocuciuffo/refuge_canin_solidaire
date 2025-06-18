@@ -1,15 +1,147 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+:root{
+  font-size: 16px;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@font-face {
+  font-family: 'Marina Sikona';
+  src: url('/fonts/MarineSikona.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans.ttf') format('truetype');
+  font-weight: 100 900;
+  /* Supports the full weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+.title1 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 2rem;
+  line-height: 130%;
+}
+
+.title2 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 1.75rem;
+  line-height: 120%;
+}
+
+.title3 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 1.5rem;
+  line-height: 120%;
+}
+
+.title4 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+
+.title5 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 1.125rem;
+  line-height: 140%;
+}
+
+.title6 {
+  font-family: 'Marina Sikona', serif;
+  font-size: 1rem;
+  line-height: 140%;
+}
+
+/* Desktop variants */
+@media (min-width: 768px) {
+  .title1 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 5rem;
+    line-height: 100%;
   }
+
+  .title2 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 3rem;
+    line-height: 120%;
+  }
+
+  .title3 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 2.5rem;
+    line-height: 120%;
+  }
+
+  .title4 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 2rem;
+    line-height: 130%;
+  }
+
+  .title5 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 1.5rem;
+    line-height: 140%;
+  }
+
+  .title6 {
+    font-family: 'Marina Sikona', serif;
+    font-size: 1.25rem;
+    line-height: 140%;
+  }
+}
+
+.text-large {
+  font-size: 1.25rem; /* 20px */
+  line-height: 150%;
+}
+
+.text-medium {
+  font-size: 1.125rem; /* 18px */
+  line-height: 150%;
+}
+
+.text-regular {
+  font-size: 1rem; /* 16px */
+  line-height: 150%;
+}
+
+.text-small {
+  font-size: 0.875rem; /* 14px */
+  line-height: 150%;
+}
+
+.text-tiny {
+  font-size: 0.75rem; /* 12px */
+  line-height: 150%;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.text-heavy {
+  font-weight: 700;
+}
+
+.text-regular-weight {
+  font-weight: 400;
+}
+
+.text-book {
+  font-weight: 350; /* Pour le Book weight approximatif */
+}
+
+.text-light {
+  font-weight: 300;
 }
