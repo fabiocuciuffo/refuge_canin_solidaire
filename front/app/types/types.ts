@@ -54,3 +54,22 @@ export type BannerProps = {
   };
   backgroundClass?: string;
 };
+
+export type TriptiqueCard = {
+  title: string;
+  subtitle?: string;
+  description: string;
+};
+
+export type TriptiqueProps = {
+  title: string;
+  highlight?: string;
+  cards: [TriptiqueCard, TriptiqueCard, TriptiqueCard];
+  backgroundColor?: string;
+  cardBackgroundColor?: string;
+  titleColor?: string;
+  textColor?: string;
+  cardTitleSize?: string;
+  cardTitleColor?: string;
+  cardTextColor?: string;
+};
