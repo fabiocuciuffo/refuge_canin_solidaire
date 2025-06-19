@@ -9,6 +9,7 @@ import ImageBanner from "~/components/ImageBanner";
 import DonBanner from "~/components/DonBanner";
 import type { ReactElement } from "react";
 import { ContactForm } from "~/components/ContactForm";
+import FAQSection, { faqData } from "~/components/FAQ";
 
 export function meta({}: MetaArgs) {
   return [
@@ -85,6 +86,65 @@ export default function Home() {
       subtitle: "Valider et recevez votre reçu",
       description:
         "Une fois le paiement validé, vous recevez automatiquement un e-mail de confirmation avec votre reçu fiscal (si applicable). Mais surtout, vous faites désormais partie de celles et ceux qui rendent ce projet possible.",
+    },
+  ];
+
+  const cinqCartesData: [
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+  ] = [
+    {
+      title: <span>01</span>,
+      subtitle: "Faites le test en ligne",
+      description:
+        "En quelques clics, complétez notre formulaire sécurisé : habitudes de vie, composition du foyer, attentes envers votre futur compagnon. Ces informations demeurent confidentielles ; elles nous aident simplement à proposer un match harmonieux entre votre quotidien et celui d’un chien qui a besoin d’une seconde chance.",
+    },
+    {
+      title: <span>02</span>,
+      subtitle: "Découvrez nos pensionnaires",
+      description:
+        "Accédez ensuite à la galerie des pensionnaires : fiches détaillées, photos, anecdotes et niveaux d’énergie. Vous pourrez filtrer par taille, tempérament ou besoins et même enregistrer vos favoris.",
+    },
+    {
+      title: <span>03</span>,
+      subtitle: "Prennez rendez-vous au refuge",
+      description:
+        "Un chien vous fait vibrer ? Planifiez en ligne la date de votre visite. Notre équipe confirme rapidement et répond d’ores et déjà à vos premières questions. Nous préparons les espaces détente pour que la rencontre se déroule au calme, dans le respect du bien-être de nos protégés.",
+    },
+    {
+      title: <span>04</span>,
+      subtitle: "Rencontrez votre futur compagnon",
+      description:
+        "En quelques clics, complétez notre formulaire sécurisé : habitudes de vie, composition du foyer, attentes envers votre futur compagnon. Ces informations demeurent confidentielles ; elles nous aident simplement à proposer un match harmonieux entre votre quotidien et celui d’un chien qui a besoin d’une seconde chance.",
+    },
+    {
+      title: <span>05</span>,
+      subtitle: "Démarrer une nouvelle aventure",
+      description:
+        "Lorsque tout le monde est conquis, place à l’adoption définitive : signature du contrat, remise du carnet de santé, kit éco-responsable et numéro d’assistance. Vous repartez avec un compagnon… et l’assurance de pouvoir compter sur notre soutien à vie, pour chaque étape de votre nouvelle histoire.",
     },
   ];
 
@@ -171,6 +231,32 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
           className: "bg-blue text-white-custom",
         }}
       />
+      <div className="flex flex-col items-center justify-center gap-8 p-4">
+        <Triptique
+          title={
+            <span>
+              Adoptez un chien,{" "}
+              <span className="svg_background">sans tracas</span>
+            </span>
+          }
+          subtitle="Au Refuge Canin Solidaire, chaque adoption s’appuie sur trois piliers : éco-responsabilité, solidarité et pédagogie. Ensemble, nous réinventons le refuge pour préserver la planète, cultiver l’entraide et accompagner chaque famille pas à pas, du premier clic au suivi post-adoption, afin de bâtir un duo durable et heureux."
+          cards={cinqCartesData}
+          backgroundColor=""
+          cardBackgroundColor="bg-beige"
+          titleColor="text-dark"
+          cardTitleSize="title2"
+          cardSubtitleeSize="title5"
+          cardTitleColor="text-red"
+          cardSubtitleColor="text-dark"
+          cardTextColor="text-dark"
+        />
+        <Button
+          className="bg-blue whitespace-nowrap w-fit! px-6 text-white"
+          link=""
+        >
+          Votre texte de bouton
+        </Button>
+      </div>
       <Marquee
         titles={["BIENVEILLANCE", "TRANSPARENCE", "RESPECT", "SOLIDARITÉ"]}
         speed={30}
@@ -191,6 +277,28 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
         image={{
           src: "/images/black-dogo.png",
           alt: "Chien noir adorable",
+        }}
+      />
+
+      <FAQSection faqs={faqData} allowMultipleOpen={false} />
+
+      <Banner
+        title={{
+          text: (
+            <span>
+              Nous. avons{" "}
+              <span className="svg_background rounded-[6px] px-2 font-bold inline-block">
+                besoin{" "}
+              </span>
+              de votre aide{" "}
+            </span>
+          ),
+        }}
+        description="Refuge Canin Solidaire ouvre bientôt ses portes! Nous avons encore besoin de votre aide. Nous réinventons les refuges en adoptant une approche solidaire, éducative et éco-responsable. Soins bienveillants, sensibilisation communautaire et pratiques durables sont au cœur de cette initiative, redéfinissant ainsi le rôle d’un refuge pour chiens."
+        button={{ text: "Soutenir le refuge", href: "/adoption" }}
+        image={{
+          src: "/images/Group57.png",
+          alt: "Un chien heureux au refuge",
         }}
       />
     </main>
