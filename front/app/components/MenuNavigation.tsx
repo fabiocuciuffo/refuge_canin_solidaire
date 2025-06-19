@@ -132,7 +132,7 @@ const MenuNavigation = () => {
           <div className="my-auto">
             <Button link="/adoption">J'adopte</Button>
             <Button link="/refuge">Le refuge</Button>
-            <Button link="/">Devenir bénévole</Button>
+            <Button link="/devenir-benevole">Devenir bénévole</Button>
             <Button link="/">Boutique</Button>
             <div className="relative flex flex-col justify-center items-center">
               <Button
@@ -176,7 +176,7 @@ const MenuNavigation = () => {
           <Button link="/refuge" className="whitespace-nowrap me-6">
             Le refuge
           </Button>
-          <Button link="/" className="whitespace-nowrap me-6">
+          <Button link="/devenir-benevole" className="whitespace-nowrap me-6">
             Devenir bénévole
           </Button>
           <Button link="/" className="whitespace-nowrap me-8">
