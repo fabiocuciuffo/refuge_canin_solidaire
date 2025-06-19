@@ -147,8 +147,8 @@ const MenuNavigation = () => {
                 />
               </Button>
               <div className="hidden absolute top-full left-1/2 -translate-x-1/2 flex-col transition-all duration-100 ease-in-out">
-                <Button link="/" className="p-0.5! text-regular-weight">
-                  Blog
+                <Button link="/articles" className="p-0.5! text-regular-weight">
+                  Articles
                 </Button>
                 <Button
                   link="/evenements"
@@ -198,8 +198,8 @@ const MenuNavigation = () => {
               />
             </Button>
             <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-md rounded-lg p-2 min-w-32 z-20">
-              <Button link="/" className="text-regular-weight my-1">
-                Blog
+              <Button link="/articles" className="text-regular-weight my-1">
+                Articles
               </Button>
               <Button link="/evenements" className="text-regular-weight my-1">
                 Événements
