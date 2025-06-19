@@ -1,5 +1,4 @@
 import Banner from "../components/Banner";
-import { BenevolatForm } from "~/components/BenevolatSubmitForm";
 
 export default function Adoptions() {
   return (
@@ -7,25 +6,22 @@ export default function Adoptions() {
       <Banner
         title={{
           text: (
-            <span>
-              Vôtre{" "}
+            <span className="text-left">
+              Tous nos{" "}
               <span className="svg_background rounded-[6px] px-2 font-bold inline-block">
-                aide{" "}
+                événements{" "}
               </span>
-              peut tout changer pour eux !
+              solidaires
             </span>
           ),
         }}
-        description="Rejoignez notre équipe de bénévoles et faites une réelle différence dans la vie de nos chiens."
+        description="Participez à nos événements: collectes, balades, rencontres, journées d’information… Chaque présence compte, chaque geste fait avancer notre projet de refuge. Venez en famille, entre amis ou en solo, vous serez toujours les bienvenus !"
         button={{ text: "Contactez le refuge", href: "#form" }}
         image={{
-          src: "/images/Group39.png",
+          src: "/images/Group53.png",
           alt: "Un chien heureux au refuge",
         }}
       />
-      <div className="flex flex-col items-center justify-center gap-8 p-4">
-        <BenevolatForm />
-      </div>
     </main>
   );
 }
