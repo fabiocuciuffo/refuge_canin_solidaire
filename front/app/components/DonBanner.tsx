@@ -32,13 +32,13 @@ function DonBanner() {
     }
   }
   return (
-    <section className='p-3 md:p-10'>
+    <section className='p-4 md:p-10'>
       <div className='mb-8'>
       <h2 className='title2 mb-4'>À quoi sert <span className='svg_background'>votre don</span> ?</h2>
       <p>Chaque euro compte, et on veut vous montrer comment. Découvrez ce que nous pouvons faire grâce à vos dons</p>
       </div>
       <div className='flex flex-row md:flex-col w-full justify-between items-center'>
-        <div ref={containerOptions} className='flex flex-col-reverse md:flex-row me-4 md:me-0 md:mb-8'>
+        <div ref={containerOptions} className='flex flex-col-reverse md:flex-row me-8 md:me-0 md:mb-8'>
           {montants.map((m) => {
             return <OptionDon content={m.toString()} selectedAmount={selectedAmount} onClickCallback={handleAmountChange} key={m.toString()} />
           })}

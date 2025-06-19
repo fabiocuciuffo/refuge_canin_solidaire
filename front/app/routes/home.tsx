@@ -6,8 +6,8 @@ import Button from "~/components/Button";
 import Marquee from "../components/Marquee";
 import InfoBanner from "~/components/InfoBanner";
 import ImageBanner from "~/components/ImageBanner";
+import DonBanner from "~/components/DonBanner";
 import type { ReactElement } from "react";
-import { spawn } from "child_process";
 
 export function meta({}: MetaArgs) {
   return [
@@ -121,6 +121,7 @@ export default function Home() {
         cardTitleColor="text-white-custom"
         cardTextColor="text-beige"
       />
+      <DonBanner/>
       <div className="flex flex-col items-center justify-center gap-8 p-4">
         <Triptique
           title="Faire un don pour"
