@@ -40,6 +40,14 @@ export type BenevolatRequest = {
   motivation: string;
 };
 
+export type ContactRequest = {
+  nom: string;
+  prenom: string;
+  email: string;
+  telephone?: string;
+  message: string;
+};
+
 export type BannerProps = {
   title: {
     text: ReactElement<HTMLSpanElement>;

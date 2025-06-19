@@ -8,6 +8,7 @@ import InfoBanner from "~/components/InfoBanner";
 import ImageBanner from "~/components/ImageBanner";
 import DonBanner from "~/components/DonBanner";
 import type { ReactElement } from "react";
+import { ContactForm } from "~/components/ContactForm";
 
 export function meta({}: MetaArgs) {
   return [
@@ -121,7 +122,7 @@ export default function Home() {
         cardTitleColor="text-white-custom"
         cardTextColor="text-beige"
       />
-      <DonBanner/>
+      <DonBanner />
       <div className="flex flex-col items-center justify-center gap-8 p-4">
         <Triptique
           title="Faire un don pour"
@@ -185,6 +186,10 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
           alt: "Chien noir adorable",
         }}
       />
+
+      <div className="bg-beige p-8 md:p-16">
+        <ContactForm />
+      </div>
     </main>
   );
 }
