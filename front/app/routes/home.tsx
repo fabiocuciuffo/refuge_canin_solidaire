@@ -3,6 +3,7 @@ import headerDog from "~/../public/assets/graphic-assets/header-dog.png";
 import Banner from "../components/Banner";
 import Triptique from "../components/Triptique";
 import Button from "~/components/Button";
+import Marquee from "../components/Marquee";
 
 export function meta({}: MetaArgs) {
   return [
@@ -107,6 +108,11 @@ export default function Home() {
           Faire un don
         </Button>
       </div>
+      <Marquee
+        titles={["BIENVEILLANCE", "TRANSPARENCE", "RESPECT", "SOLIDARITÉ"]}
+        speed={30}
+        className="bg-blue text-white-custom"
+      />
     </main>
   );
 }
