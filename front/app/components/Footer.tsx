@@ -35,7 +35,7 @@ export default function Footer() {
   ];
 
   return (
-    <div className="p-4">
+    <div className="p-4 mt-auto mb-0">
       <footer className="bg-white-custom border-t border-gray-100 max-w-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 lg:pt-20 pb-8 sm:pb-12 lg:pb-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mb-12 lg:mb-16">
