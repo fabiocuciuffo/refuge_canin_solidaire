@@ -1,10 +1,11 @@
 import type { MetaArgs } from "react-router";
-import headerDog from "/assets/graphic-assets/header-dog.png";
+import headerDog from "/images/header-dog.png";
 import Banner from "../components/Banner";
 import Triptique from "../components/Triptique";
 import Button from "~/components/Button";
 import Marquee from "../components/Marquee";
 import InfoBanner from "~/components/InfoBanner";
+import ImageBanner from "~/components/ImageBanner";
 
 export function meta({}: MetaArgs) {
   return [
@@ -133,6 +134,23 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
         titles={["BIENVEILLANCE", "TRANSPARENCE", "RESPECT", "SOLIDARITÉ"]}
         speed={30}
         className="bg-blue text-white-custom"
+      />
+      <ImageBanner
+        title={
+          <span>
+            Découvrez le
+            <span className="svg_background">refuge</span>
+          </span>
+        }
+        description="Le Refuge Canin Solidaire est né d’une conviction forte : offrir une seconde chance aux chiens blessés par la vie, en les accompagnant avec respect, douceur et engagement."
+        button={{
+          text: "En savoir plus",
+          href: "",
+        }}
+        image={{
+          src: "/images/black-dogo.png",
+          alt: "Chien noir adorable",
+        }}
       />
     </main>
   );
