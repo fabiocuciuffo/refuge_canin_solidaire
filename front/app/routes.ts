@@ -20,6 +20,7 @@ export default [
     // API Routes
     route("api/subscribe-newsletter", "routes/api/subscribe-newsletter.ts"),
     route("api/submit-benevolat", "routes/api/submit-benevolat.ts"),
+    route("api/submit-contact", "routes/api/submit-contact.ts"),
     route("*", "routes/error.tsx"),
   ]),
 ] satisfies RouteConfig;
