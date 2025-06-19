@@ -209,7 +209,7 @@ const MenuNavigation = () => {
         </div>
         <div className="flex w-fit ">
           <Button
-            link="/"
+            link="/contact"
             className="border whitespace-nowrap w-fit! px-6 me-2"
           >
             Contactez-nous

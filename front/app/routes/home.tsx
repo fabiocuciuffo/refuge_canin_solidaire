@@ -186,10 +186,6 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
           alt: "Chien noir adorable",
         }}
       />
-
-      <div className="bg-beige p-8 md:p-16">
-        <ContactForm />
-      </div>
     </main>
   );
 }
