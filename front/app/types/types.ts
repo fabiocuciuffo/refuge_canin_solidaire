@@ -1,3 +1,5 @@
+import type { ReactElement } from "react";
+
 export type EmailAddress = string;
 
 export interface Email {
@@ -74,4 +76,20 @@ export type TriptiqueProps = {
   cardTitleColor?: string;
   cardSubtitleColor?: string;
   cardTextColor?: string;
+};
+
+export type InfoBannerProps = {
+  image: {
+    src: string;
+    alt: string;
+    className?: string;
+  };
+  title: ReactElement<HTMLSpanElement>;
+  description: string;
+  button: {
+    text: string;
+    href: string;
+    className?: string;
+  };
+  className?: string;
 };
