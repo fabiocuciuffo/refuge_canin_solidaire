@@ -11,7 +11,7 @@ export function meta({}: MetaArgs) {
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center md:items-stretch max-w-screen overflow-x-hidden">
+    <div className="min-h-screen bg-white flex flex-col items-center md:items-stretch max-w-screen overflow-x-hidden">
       <MenuNavigation />
       <main className="flex-grow">
         <Outlet />
