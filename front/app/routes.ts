@@ -12,6 +12,7 @@ export default [
     route("refuge", "routes/refuge.tsx"),
     route("devenir-benevole", "routes/devenir-benevole.tsx"),
     route("evenements", "routes/evenements.tsx"),
+    route("articles", "routes/articles.tsx"),
     route("a-propos", "routes/a-propos.tsx"),
     route("contact", "routes/contact.tsx"),
     route("ressources", "routes/ressources.tsx"),
