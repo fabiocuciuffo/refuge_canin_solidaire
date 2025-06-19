@@ -39,7 +39,7 @@ export default function Banner({
             src={image.src}
             alt={image.alt}
             loading="lazy"
-            className="max-w-full h-auto z-10 relative object-contain md:max-h-full md:object-bottom md:translate-x-14 md:translate-y-36"
+            className={`max-w-full h-auto z-10 relative object-contain md:max-h-full md:object-bottom md:translate-x-36 md:translate-y-48`}
           />
         </div>
       </section>
