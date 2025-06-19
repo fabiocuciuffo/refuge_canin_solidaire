@@ -93,3 +93,17 @@ export type InfoBannerProps = {
   };
   className?: string;
 };
+
+export type ImageBannerProps = {
+  title: ReactElement<HTMLSpanElement>;
+  description: string;
+  button: {
+    text: string;
+    href: string;
+  };
+  image: {
+    src: string;
+    alt: string;
+  };
+  className?: string;
+};
