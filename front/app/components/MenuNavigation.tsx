@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { Link } from "react-router";
 import Button from "./Button"
 
 const MenuNavigation = () => {
@@ -70,6 +69,24 @@ const MenuNavigation = () => {
 
   }
 
+  function toggleDesktopCollapseLink(e: React.MouseEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    const content = e.currentTarget.nextElementSibling;
+    const chevron = e.currentTarget.querySelector("img");
+    if (content && chevron) {
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        chevron.classList.add("rotate-90");
+      } else {
+        setTimeout(() => {
+          content.classList.add("hidden");
+          chevron.classList.remove("rotate-90");
+        }, 100)
+      }
+    }
+
+  }
+
   return (
     <nav className="sticky top-0 left-0 justify-between md:items-center w-full h-fit flex py-5 px-4 bg-white z-50">
       <div className="relative flex justify-between md:hidden w-full z-50">
@@ -88,7 +105,7 @@ const MenuNavigation = () => {
             <Button link="/">Le refuge</Button>
             <Button link="/">Devenir bénévole</Button>
             <Button link="/">Boutique</Button>
-            <div className="flex flex-col justify-center items-center">
+            <div className="relative flex flex-col justify-center items-center">
               <Button
                 onClickCallback={toggleMobileCollapseLink}
                 className="flex! items-center justify-center w-full"
@@ -100,7 +117,7 @@ const MenuNavigation = () => {
                   className="transition-transform duration-300 ease-in-out"
                 />
               </Button>
-              <div className="hidden flex-col px-auto transition-all duration-100 ease-in-out">
+              <div className="hidden absolute top-full left-1/2 -translate-x-1/2 flex-col transition-all duration-100 ease-in-out">
                 <Button link="/" className="p-0.5! text-regular-weight">Blog</Button>
                 <Button link="/" className="p-0.5! text-regular-weight">Événements</Button>
               </div>
@@ -111,7 +128,7 @@ const MenuNavigation = () => {
               Contactez-nous
             </Button>
             <span className="invisible min-w-3"></span>
-            <Button link="/" className="bg-blue">
+            <Button link="/" className="bg-blue text-white">
               Faire un don
             </Button>
           </div>
@@ -123,13 +140,27 @@ const MenuNavigation = () => {
           <Button link="/" className="whitespace-nowrap me-6">J'adopte</Button>
           <Button link="/" className="whitespace-nowrap me-6">Le refuge</Button>
           <Button link="/" className="whitespace-nowrap me-6">Devenir bénévole</Button>
-          <Button link="/" className="whitespace-nowrap">Boutique</Button>
+          <Button link="/" className="whitespace-nowrap me-8">Boutique</Button>
+          <div className="relative group">
+            <Button className="flex! items-center justify-center" onClickCallback={toggleDesktopCollapseLink}>
+              Ressources
+              <img
+                src="/vector/chevron.svg"
+                alt="Chevron"
+                className="transition-transform duration-100 ease-in-out group-hover:rotate-90"
+              />
+            </Button>
+            <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-white shadow-md rounded-lg p-2 min-w-32 z-20">
+              <Button link="/" className="text-regular-weight my-1">Blog</Button>
+              <Button link="/" className="text-regular-weight my-1">Événements</Button>
+            </div>
+          </div>
         </div>
         <div className="flex w-fit ">
           <Button link="/" className="border whitespace-nowrap w-fit! px-6 me-2">
             Contactez-nous
           </Button>
-          <Button link="/" className="bg-blue whitespace-nowrap w-fit! px-6">
+          <Button link="/" className="bg-blue whitespace-nowrap w-fit! px-6 text-white">
             Faire un don
           </Button>
         </div>
