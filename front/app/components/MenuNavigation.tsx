@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import Button from "./Button";
+import { Link } from "react-router";
 
 const MenuNavigation = () => {
   const menu_mobile = useRef<HTMLDivElement | null>(null);
@@ -97,7 +98,9 @@ const MenuNavigation = () => {
   return (
     <nav className="sticky top-0 left-0 justify-between md:items-center w-full h-fit flex py-5 px-4 bg-white z-50">
       <div className="relative flex justify-between md:hidden w-full z-50">
-        <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
+        <Link rel="stylesheet" to="/" className="hover:cursor-pointer">
+          <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
+        </Link>
         <div className="inline-flex">
           <button
             onClick={openMenu}
@@ -113,7 +116,7 @@ const MenuNavigation = () => {
         </div>
       </div>
       <div
-        className="invisible h-screen w-full bg-white absolute z-40 top-0 left-0 transition-all duration-300 ease-in-out  -translate-y-full flex flex-col justify-center md:hidden px-4"
+        className="invisible h-[100svh] w-full bg-white absolute z-40 top-0 left-0 transition-all duration-300 ease-in-out  -translate-y-full flex flex-col justify-center md:hidden px-4"
         id="menu_mobile"
         ref={menu_mobile}
       >
@@ -171,7 +174,9 @@ const MenuNavigation = () => {
         </div>
       </div>
       <div className="hidden md:flex justify-between w-full z-10">
-        <img src="/images/logo_RCS.svg" alt="" className="max-w-48 me-2" />
+        <Link rel="stylesheet" to="/" className="hover:cursor-pointer">
+          <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
+        </Link>
         <div className="flex me-2">
           <Button link="/adoption" className="whitespace-nowrap me-6">
             J'adopte

@@ -1,5 +1,6 @@
 import Footer from "~/components/Footer";
 import MenuNavigation from "../components/MenuNavigation";
+import Sos from "~/components/Sos";
 import { Outlet, type MetaArgs } from "react-router";
 
 export function meta({}: MetaArgs) {
@@ -11,12 +12,15 @@ export function meta({}: MetaArgs) {
 
 export default function Layout() {
   return (
+    <>
     <div className="min-h-screen bg-white flex flex-col items-center md:items-stretch max-w-screen overflow-x-hidden">
       <MenuNavigation />
       <main className="flex-grow">
         <Outlet />
       </main>
-      <Footer />
     </div>
+    <Footer />
+    <Sos/>
+    </>
   );
 }
