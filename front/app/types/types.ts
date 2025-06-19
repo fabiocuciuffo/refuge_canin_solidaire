@@ -155,7 +155,7 @@ export type ActionItem = {
 };
 
 export type ActionsSectionProps = {
-  title?: string;
+  title?: ReactElement<HTMLSpanElement>;
   subtitle?: string;
   actions: ActionItem[];
   className?: string;
@@ -192,4 +192,71 @@ export type FAQItemProps = {
   faq: FAQItem;
   isOpen: boolean;
   onToggle: () => void;
+};
+
+export type ValueItem = {
+  id: string | number;
+  number: string;
+  title: string;
+  description: string;
+};
+
+export type ValuesSectionProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  subtitle?: string;
+  description?: string;
+  values: ValueItem[];
+  className?: string;
+};
+
+export type TimelineItem = {
+  id: string | number;
+  year: string;
+  title: string;
+  description: string;
+  isSpecial?: boolean;
+  buttonText?: string;
+  buttonLink?: string;
+};
+
+export type TimelineSectionProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  description?: string;
+  supportButtonText?: string;
+  supportButtonLink?: string;
+  items: TimelineItem[];
+  className?: string;
+};
+
+export type TimelineCardProps = {
+  item: TimelineItem;
+  position: "left" | "right";
+};
+
+export type PartnerItem = {
+  id: string | number;
+  name: string;
+  logo: string;
+  website?: string;
+  alt?: string;
+};
+
+export type PartnersSectionProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  partners: PartnerItem[];
+  className?: string;
+};
+
+export type GalleryImage = {
+  id: string | number;
+  src: string;
+  alt: string;
+  caption?: string;
+};
+
+export type GallerySectionProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  description?: string;
+  images: GalleryImage[];
+  className?: string;
 };

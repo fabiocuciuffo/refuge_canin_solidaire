@@ -2,12 +2,12 @@ import Banner from "../components/Banner";
 import InfoBanner from "~/components/InfoBanner";
 import Triptique from "~/components/Triptique";
 import Button from "~/components/Button";
-import ActionsSection from "~/components/actionsSections";
 import Marquee from "~/components/Marquee";
 import type { ReactElement } from "react";
 import type { ActionItem } from "~/types/types";
 import FAQSection from "~/components/FAQ";
 import { faqData } from "~/components/FAQ";
+import ActionsSection from "~/components/ActionsSections";
 
 export default function Adoptions() {
   const cinqCartesData: [
@@ -329,7 +329,11 @@ export default function Adoptions() {
       <div>
         <ActionsSection
           actions={actionsData}
-          title="Nos actions"
+          title={
+            <span>
+              Nos <span className="svg_background">actions</span>
+            </span>
+          }
           subtitle="En parallèle de sa création, le refuge a déjà initié plusieurs actions concrètes."
         />
       </div>

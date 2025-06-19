@@ -13,11 +13,7 @@ const ActionCard: React.FC<ActionCardProps> = ({
     className={`bg-white rounded-lg shadow-sm overflow-hidden transition-shadow duration-300 text-center ${className}`}
   >
     <div className="aspect-w-16 aspect-h-12 bg-gray-200">
-      <img
-        src={image}
-        alt={alt || title}
-        className="w-full h-64 object-cover"
-      />
+      <img src={image} alt={alt} className="w-full h-64 object-cover" />
     </div>
     <div className="p-6">
       <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
@@ -52,27 +48,11 @@ const ActionsSection: React.FC<ActionsSectionProps> = ({
   className = "",
   highlightWordIndex = 1,
 }) => {
-  const renderTitle = () => {
-    const words = title.split(" ");
-    return words.map((word, index) =>
-      index === highlightWordIndex ? (
-        <span key={index} className="bg-yellow-400 px-2 py-1 rounded">
-          {word}
-        </span>
-      ) : (
-        <span key={index}>{word} </span>
-      )
-    );
-  };
-
   return (
     <section className={`bg-white py-16 px-5 ${className}`}>
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
+      <div className=" mx-auto">
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            {renderTitle()}
-          </h2>
+          <h2 className="title3 md:title4 text-dark mb-6">{title}</h2>
           <p className="text-lg text-gray-600 leading-relaxed max-w-4xl">
             {subtitle}
           </p>
