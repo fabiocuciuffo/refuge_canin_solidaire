@@ -78,7 +78,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="p-8 bg-gray-50">
+    <section className="p-8">
       <div className="mx-auto px-6">
         <div className="flex items-stretch gap-10 lg:gap-16 max-h-[80vh]">
           <div className="flex-1 flex flex-col">
