@@ -2,7 +2,7 @@ import Banner from "../components/Banner";
 
 export default function Adoptions() {
   return (
-    <main>
+    <main className="top-0">
       <Banner
         title={{
           text: "C'est bientôt l'heure de se",
