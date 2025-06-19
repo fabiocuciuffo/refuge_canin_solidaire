@@ -78,7 +78,7 @@ export default function Footer() {
                   </span>
                   <a
                     href="tel:0556873668"
-                    className="text-regular font-medium hover:text-blue transition-colors duration-200"
+                    className="title6 text-sm text-blue transition-colors duration-200"
                   >
                     05 56 87 36 68
                   </a>

@@ -6,6 +6,7 @@ import Button from "~/components/Button";
 import Marquee from "../components/Marquee";
 import InfoBanner from "~/components/InfoBanner";
 import ImageBanner from "~/components/ImageBanner";
+import type { ReactElement } from "react";
 
 export function meta({}: MetaArgs) {
   return [
@@ -16,45 +17,69 @@ export function meta({}: MetaArgs) {
 
 export default function Home() {
   const statistiquesData: [
-    { title: string; description: string },
-    { title: string; description: string },
-    { title: string; description: string },
+    { title: ReactElement<HTMLSpanElement>; description: string },
+    { title: ReactElement<HTMLSpanElement>; description: string },
+    { title: ReactElement<HTMLSpanElement>; description: string },
   ] = [
     {
-      title: "- 5,8%",
+      title: (
+        <span>
+          <span className="text-yellow">-</span> 5,8%
+        </span>
+      ),
       description:
         "Les adoptions sont en baisse constante, avec une diminution de 5,8 % en 2024 par rapport à 2023.",
     },
     {
-      title: "+ 1,5%",
+      title: (
+        <span>
+          <span className="text-yellow">+</span> 1,5%
+        </span>
+      ),
       description: "Nombre d’animaux abandonnés par rapport à 2022.",
     },
     {
-      title: "= 1465",
+      title: (
+        <span>
+          <span className="text-yellow">=</span> 1465
+        </span>
+      ),
       description:
         "En Gironde, la SPA de Bordeaux et du Sud-Ouest a accueilli 1 465 animaux abandonnés en 2022, un chiffre en constante augmentation.",
     },
   ];
 
   const faireUnDonData: [
-    { title: string; subtitle?: string; description: string },
-    { title: string; subtitle?: string; description: string },
-    { title: string; subtitle?: string; description: string },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
+    {
+      title: ReactElement<HTMLSpanElement>;
+      subtitle?: string;
+      description: string;
+    },
   ] = [
     {
-      title: "01",
+      title: <span>01</span>,
       subtitle: "Choisissez le type de don",
       description:
         "Ponctuel ou mensuel, petit ou grand, chaque don a un impact. Vous pouvez nous soutenir une fois, ou rejoindre notre cercle de donateurs réguliers pour accompagner le refuge dans la durée. Quel que soit votre choix, vous contribuez directement à offrir une seconde chance à nos chiens.",
     },
     {
-      title: "02",
+      title: <span>02</span>,
       subtitle: "Remplissez le formulaire",
       description:
         "En quelques clics, vous indiquez le montant, vos coordonnées et votre préférence de paiement. sNotre formulaire est entièrement sécurisé, et vous avez même la possibilité de dédier votre don à un chien en particulier ou à une action précise (sauvetage, soins, alimentation). sC’est simple, rapide, et totalement transparent.",
     },
     {
-      title: "03",
+      title: <span>03</span>,
       subtitle: "Valider et recevez votre reçu",
       description:
         "Une fois le paiement validé, vous recevez automatiquement un e-mail de confirmation avec votre reçu fiscal (si applicable). Mais surtout, vous faites désormais partie de celles et ceux qui rendent ce projet possible.",

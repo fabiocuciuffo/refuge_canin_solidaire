@@ -58,7 +58,7 @@ export type BannerProps = {
 };
 
 export type TriptiqueCard = {
-  title: string;
+  title: ReactElement<HTMLSpanElement>;
   subtitle?: string;
   description: string;
 };

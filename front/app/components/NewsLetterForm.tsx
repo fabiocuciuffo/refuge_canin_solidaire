@@ -97,7 +97,7 @@ export function SimpleNewsletterForm({ className = "" }) {
             <button
               type="submit"
               disabled={loading || !email.trim()}
-              className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="px-6 py-3 bg-blue text-white font-medium rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               {loading ? (
                 <span className="flex items-center gap-2">
@@ -130,14 +130,14 @@ export function SimpleNewsletterForm({ className = "" }) {
           <div
             className={`p-4 rounded-lg border ${
               message.type === "success"
-                ? "bg-green-50 text-green-800 border-green-200"
-                : "bg-red-50 text-red-800 border-red-200"
+                ? "bg-green-50 text-green border-green-200"
+                : "bg-red-50 text-red border-red-200"
             }`}
           >
             <div className="flex items-center gap-2">
               {message.type === "success" ? (
                 <svg
-                  className="w-5 h-5 text-green-600"
+                  className="w-5 h-5 text-green"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -149,7 +149,7 @@ export function SimpleNewsletterForm({ className = "" }) {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5 text-red-600"
+                  className="w-5 h-5 text-red"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -165,7 +165,7 @@ export function SimpleNewsletterForm({ className = "" }) {
           </div>
         )}
 
-        <p className="text-xs text-gray-500 text-center">
+        <p className="text-xs text-white-custom text-center">
           En vous inscrivant, vous acceptez de recevoir nos emails. Vous pouvez
           vous désabonner à tout moment.
         </p>
@@ -221,20 +221,20 @@ export function CompactNewsletterForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 max-w-xs">
+    <form onSubmit={handleSubmit} className="flex max-w-xs">
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
         disabled={loading}
-        className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-blue-500 disabled:opacity-50 text-black"
+        className="flex-1 px-2 py-1 text-sm border border-gray-300 rounded-s focus:outline-none focus:ring-blue-500 disabled:opacity-50 text-black"
         required
       />
       <button
         type="submit"
         disabled={loading || !email.trim()}
-        className="px-3 py-1 text-sm bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+        className="px-3 py-1 text-sm bg-blue text-white rounded-e hover:bg-blue disabled:opacity-50"
       >
         {loading ? "..." : "OK"}
       </button>
