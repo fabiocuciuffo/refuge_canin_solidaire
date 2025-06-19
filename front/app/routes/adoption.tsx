@@ -1,4 +1,3 @@
-import { spawn } from "child_process";
 import Banner from "../components/Banner";
 
 export default function Adoptions() {
