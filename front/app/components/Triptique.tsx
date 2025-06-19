@@ -27,7 +27,7 @@ export default function Triptique({
             {cards.map((card, index) => (
               <div
                 key={index}
-                className={`${cardBackgroundColor} p-4 h-80 flex flex-col justify-center items-center text-left rounded-lg`}
+                className={`${cardBackgroundColor} p-4 h-80 flex flex-col justify-between items-left text-left rounded-lg`}
               >
                 <h2 className={`${cardTitleSize} ${cardTitleColor} mb-2`}>
                   {card.title}
@@ -40,12 +40,9 @@ export default function Triptique({
                     {card.subtitle}
                   </h3>
                 )}
-
-                <div className="flex-1 flex items-center justify-center">
                   <p className={`text-small ${cardTextColor} leading-relaxed`}>
                     {card.description}
                   </p>
-                </div>
               </div>
             ))}
           </div>
