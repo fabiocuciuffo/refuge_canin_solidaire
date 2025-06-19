@@ -150,7 +150,10 @@ const MenuNavigation = () => {
                 <Button link="/" className="p-0.5! text-regular-weight">
                   Blog
                 </Button>
-                <Button link="/" className="p-0.5! text-regular-weight">
+                <Button
+                  link="/evenements"
+                  className="p-0.5! text-regular-weight"
+                >
                   Événements
                 </Button>
               </div>
@@ -198,7 +201,7 @@ const MenuNavigation = () => {
               <Button link="/" className="text-regular-weight my-1">
                 Blog
               </Button>
-              <Button link="/" className="text-regular-weight my-1">
+              <Button link="/evenements" className="text-regular-weight my-1">
                 Événements
               </Button>
             </div>

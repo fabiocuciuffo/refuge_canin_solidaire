@@ -10,6 +10,8 @@ export default [
     index("routes/home.tsx"),
     route("adoption", "routes/adoption.tsx"),
     route("refuge", "routes/refuge.tsx"),
+    route("devenir-benevole", "routes/devenir-benevole.tsx"),
+    route("evenements", "routes/evenements.tsx"),
     route("a-propos", "routes/a-propos.tsx"),
     route("contact", "routes/contact.tsx"),
     route("ressources", "routes/ressources.tsx"),
