@@ -4,7 +4,7 @@ function OptionDon ({onClickCallback, selectedAmount, content}:{onClickCallback?
     classActive = ""
   }
   return (
-      <div className="flex md:flex-col justify-center items-center mb-3" onClick={onClickCallback} key={content}>
+      <div className="flex md:flex-col justify-center items-center mb-3 cursor-pointer" onClick={onClickCallback} key={content}>
         <div className="rounded-full border-2 bg-beige p-1 md:p-4 me-4">
           <div className={"bg-red p-1.5 md:p-3 rounded-full coche_option" + " " + classActive} data-value={content}></div>
         </div>
