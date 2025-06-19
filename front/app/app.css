@@ -210,14 +210,14 @@
 }
 
 .svg_background {
-  background-image: url("/public/assets/graphic-assets/Vector-underline.png");
+  background-image: url("/assets/graphic-assets/Vector-underline.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 0.5rem;
 }
 
 .svg_background_white {
-  background-image: url("/public/assets/graphic-assets/highlight-white.png");
+  background-image: url("/assets/graphic-assets/highlight-white.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding: 0.5rem;

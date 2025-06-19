@@ -6,13 +6,15 @@ interface MarqueeProps {
 
 export default function Marquee({
   titles = ["BIENVEILLANCE", "TRANSPARENCE", "RESPECT", "SOLIDARITÉ"],
-  speed = 30,
+  speed = 45,
   className = "",
 }: MarqueeProps) {
   const duplicatedTitles = [...titles, ...titles];
 
   return (
-    <div className={`w-full overflow-hidden bg-blue py-4 mt-8 ${className}`}>
+    <div
+      className={`w-full max-w-screen overflow-hidden bg-blue py-4 mt-8 ${className}`}
+    >
       <div
         className="flex whitespace-nowrap animate-marquee"
         style={{
