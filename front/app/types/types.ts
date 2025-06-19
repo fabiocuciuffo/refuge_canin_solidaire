@@ -260,3 +260,16 @@ export type GallerySectionProps = {
   images: GalleryImage[];
   className?: string;
 };
+
+export type EmergencyContact = {
+  id: string | number;
+  name: string;
+  phone: string;
+  description: string;
+  available: string;
+};
+
+export type SOSProps = {
+  emergencyContacts?: EmergencyContact[];
+  className?: string;
+};
