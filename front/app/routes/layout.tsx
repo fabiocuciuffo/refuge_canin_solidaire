@@ -1,3 +1,4 @@
+import Footer from "~/components/Footer";
 import MenuNavigation from "../components/MenuNavigation";
 import { Outlet } from "react-router";
 
@@ -8,6 +9,7 @@ export default function Layout() {
       <main className="flex flex-col items-center justify-center w-full md:items-stretch">
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 }
