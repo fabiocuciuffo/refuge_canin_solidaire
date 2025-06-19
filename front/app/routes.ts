@@ -13,6 +13,7 @@ export default [
     route("devenir-benevole", "routes/devenir-benevole.tsx"),
     route("evenements", "routes/evenements.tsx"),
     route("articles", "routes/articles.tsx"),
+    route("articles/:slug", "routes/articles.$slug.tsx"),
     route("a-propos", "routes/a-propos.tsx"),
     route("contact", "routes/contact.tsx"),
     route("ressources", "routes/ressources.tsx"),

@@ -9,6 +9,8 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@portabletext/react": "^3.2.1",
+    "@portabletext/types": "^2.0.13",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
     "@sanity/client": "^7.6.0",

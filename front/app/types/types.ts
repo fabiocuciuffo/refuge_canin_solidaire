@@ -114,3 +114,28 @@ export type ImageBannerProps = {
   };
   className?: string;
 };
+
+export type Article = {
+  _id: string;
+  title: string;
+  slug: { current: string };
+  category: string;
+  excerpt?: string;
+  body?: any;
+  mainImage?: {
+    asset: {
+      _ref: string;
+      url?: string;
+    };
+    alt?: string;
+  };
+  publishedAt: string;
+  author?: {
+    name: string;
+    image?: {
+      asset: {
+        url: string;
+      };
+    };
+  };
+};
