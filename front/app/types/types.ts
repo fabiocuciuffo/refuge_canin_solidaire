@@ -57,6 +57,10 @@ export type BannerProps = {
     text: string;
     href: string;
   };
+  button2?: {
+    text: string;
+    href: string;
+  };
   image: {
     src: string;
     alt: string;
@@ -71,9 +75,9 @@ export type TriptiqueCard = {
 };
 
 export type TriptiqueProps = {
-  title: string;
-  highlight?: string;
-  cards: [TriptiqueCard, TriptiqueCard, TriptiqueCard];
+  title: ReactElement<HTMLSpanElement>;
+  subtitle?: string;
+  cards: TriptiqueCard[];
   backgroundColor?: string;
   cardBackgroundColor?: string;
   titleColor?: string;
@@ -99,6 +103,7 @@ export type InfoBannerProps = {
     className?: string;
   };
   className?: string;
+  imagePosition?: "left" | "right";
 };
 
 export type ImageBannerProps = {
@@ -138,4 +143,53 @@ export type Article = {
       };
     };
   };
+};
+
+export type ActionItem = {
+  id?: string | number;
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+  alt?: string;
+};
+
+export type ActionsSectionProps = {
+  title?: string;
+  subtitle?: string;
+  actions: ActionItem[];
+  className?: string;
+  highlightWordIndex?: number;
+};
+
+export type ActionCardProps = {
+  image: string;
+  title: string;
+  description: string;
+  link?: string;
+  alt?: string;
+  className?: string;
+};
+
+export type FAQItem = {
+  id: string | number;
+  question: string;
+  answer: string;
+  isOpen?: boolean;
+};
+
+export type FAQSectionProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  subtitle?: string;
+  faqs: FAQItem[];
+  contactButtonText?: string;
+  contactButtonLink?: string;
+  className?: string;
+  allowMultipleOpen?: boolean;
+};
+
+export type FAQItemProps = {
+  faq: FAQItem;
+  isOpen: boolean;
+  onToggle: () => void;
 };

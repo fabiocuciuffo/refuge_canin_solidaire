@@ -7,12 +7,15 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
   description,
   button,
   className = "",
+  imagePosition = "left",
 }) => {
   return (
     <div
       className={`w-full max-h-[80vh] mt-4 p-4 flex justify-center ${className}`}
     >
-      <div className="flex flex-col md:flex-row h-full max-h-[65vh] overflow-hidden md:gap-8 lg:gap-32">
+      <div
+        className={`flex flex-col md:flex-row h-full max-h-[65vh] overflow-hidden md:gap-8 lg:gap-32 ${imagePosition === "right" ? "md:flex-row-reverse" : ""}`}
+      >
         <div className="w-full md:w-5/12 lg:w-2/5 h-52 md:h-auto relative overflow-hidden flex justify-centers">
           <img
             src={image.src}

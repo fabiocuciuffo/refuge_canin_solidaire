@@ -112,8 +112,11 @@ export default function Home() {
         }}
       />
       <Triptique
-        title="Quelques"
-        highlight="statistiques clés"
+        title={
+          <span>
+            Quelques <span className="svg_background">statistiques clés</span>
+          </span>
+        }
         cards={statistiquesData}
         backgroundColor="bg-beige"
         cardBackgroundColor="bg-blue"
@@ -125,8 +128,12 @@ export default function Home() {
       <DonBanner />
       <div className="flex flex-col items-center justify-center gap-8 p-4">
         <Triptique
-          title="Faire un don pour"
-          highlight="sauver une vie"
+          title={
+            <span>
+              Faire un don pour{" "}
+              <span className="svg_background">sauver une vie</span>
+            </span>
+          }
           cards={faireUnDonData}
           backgroundColor=""
           cardBackgroundColor="bg-beige"

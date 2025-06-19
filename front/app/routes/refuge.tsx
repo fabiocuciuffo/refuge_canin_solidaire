@@ -1,4 +1,8 @@
+import InfoBanner from "~/components/InfoBanner";
 import Banner from "../components/Banner";
+import Triptique from "~/components/Triptique";
+import Button from "~/components/Button";
+import type { ReactElement } from "react";
 
 export default function Adoptions() {
   return (
