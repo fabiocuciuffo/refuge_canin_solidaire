@@ -13,17 +13,7 @@ export default function Banner({
         className={`${backgroundClass} rounded-2xl pt-8 pb-0 text-white mt-6 relative flex flex-col justify-center overflow-hidden md:m-0 md:w-full md:max-h-[85vh] md:flex-row md:justify-between md:items-stretch md:mt-0`}
       >
         <div className="px-6 md:w-1/2 md:px-12 md:py-16 md:flex md:flex-col md:justify-start md:items-start">
-          <h1 className="title1 font-bold mb-3 leading-tight">
-            {title.text}
-            {title.highlightedText && (
-              <>
-                <br />
-                <span className="svg_background text-black rounded-[6px] px-2 font-bold inline-block">
-                  {title.highlightedText}
-                </span>
-              </>
-            )}
-          </h1>
+          <h1 className="title1 font-bold mb-3 leading-tight">{title.text}</h1>
           <p className="text-regular font-bold mb-6 text-white md:text-large md:mb-8">
             {description}
           </p>

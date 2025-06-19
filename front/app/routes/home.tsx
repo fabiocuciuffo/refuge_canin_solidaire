@@ -7,6 +7,7 @@ import Marquee from "../components/Marquee";
 import InfoBanner from "~/components/InfoBanner";
 import ImageBanner from "~/components/ImageBanner";
 import type { ReactElement } from "react";
+import { spawn } from "child_process";
 
 export function meta({}: MetaArgs) {
   return [
@@ -90,8 +91,14 @@ export default function Home() {
     <main>
       <Banner
         title={{
-          text: "Le refuge canin qui",
-          highlightedText: "sauve des vies",
+          text: (
+            <span>
+              Un refuge canin qui{" "}
+              <span className="svg_background rounded-[6px] px-2 font-bold inline-block">
+                sauve des vies
+              </span>
+            </span>
+          ),
         }}
         description="Refuge Canin Solidaire réinvente les refuges en adoptant une approche solidaire, éducative et éco-responsable, redéfinissant ainsi le rôle d'un refuge pour chiens."
         button={{

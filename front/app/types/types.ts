@@ -42,8 +42,7 @@ export type BenevolatRequest = {
 
 export type BannerProps = {
   title: {
-    text: string;
-    highlightedText?: string;
+    text: ReactElement<HTMLSpanElement>;
   };
   description: string;
   button: {
