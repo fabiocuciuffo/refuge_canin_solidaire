@@ -10,7 +10,7 @@ export default function Banner({
   return (
     <div className="p-6">
       <section
-        className={`${backgroundClass} rounded-2xl pt-8 pb-0 text-white mt-6 relative flex flex-col justify-center overflow-hidden md:m-0 md:w-full md:min-h-screen md:flex-row md:justify-between md:items-stretch md:mt-0`}
+        className={`${backgroundClass} rounded-2xl pt-8 pb-0 text-white mt-6 relative flex flex-col justify-center overflow-hidden md:m-0 md:w-full md:max-h-[85vh] md:flex-row md:justify-between md:items-stretch md:mt-0`}
       >
         <div className="px-6 md:w-1/2 md:px-12 md:py-16 md:flex md:flex-col md:justify-start md:items-start">
           <h1 className="title1 font-bold mb-3 leading-tight">
