@@ -120,7 +120,7 @@ const MenuNavigation = () => {
         id="menu_mobile"
         ref={menu_mobile}
       >
-        <div className="w-full h-fit py-2">
+        <div className="w-full h-[15svh] py-2">
           <img
             src="/images/logo_RCS.svg"
             alt=""
@@ -129,7 +129,7 @@ const MenuNavigation = () => {
           />
         </div>
         <div
-          className="bg-beige flex flex-col w-full h-full rounded-2xl opacity-0 transition-all duration-300 ease-in-out justify-start p-4 my-4"
+          className="bg-beige flex flex-col w-full h-[70svh] rounded-2xl opacity-0 transition-all duration-300 ease-in-out justify-start p-4"
           ref={menu_mobile_inside}
         >
           <div className="my-auto">
