@@ -4,6 +4,7 @@ import Banner from "../components/Banner";
 import Triptique from "../components/Triptique";
 import Button from "~/components/Button";
 import Marquee from "../components/Marquee";
+import InfoBanner from "~/components/InfoBanner";
 
 export function meta({}: MetaArgs) {
   return [
@@ -108,6 +109,26 @@ export default function Home() {
           Faire un don
         </Button>
       </div>
+      <InfoBanner
+        image={{
+          src: "/images/layko.png",
+          alt: "Layko",
+          className: " h-34 md:h-full",
+        }}
+        title={
+          <span>
+            <span className="svg_background">Layko a été sauvé</span> grâce à
+            vous
+          </span>
+        }
+        description="Récupéré par la SPA, il attendait… mais personne ne s’intéressait à lui.
+Placé dans le couloir de la mort, son sort était presque scellé. On est intervenus juste à temps. L’asso l’a pris sous son aile, et on lui a promis une autre vie. Aujourd’hui, Layko coule des jours heureux à Grenoble, entouré d’amour depuis plus de 2 ans."
+        button={{
+          text: "En savoir plus",
+          href: "",
+          className: "bg-blue text-white-custom",
+        }}
+      />
       <Marquee
         titles={["BIENVEILLANCE", "TRANSPARENCE", "RESPECT", "SOLIDARITÉ"]}
         speed={30}
