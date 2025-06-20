@@ -97,7 +97,7 @@ export type InfoBannerProps = {
   };
   title: ReactElement<HTMLSpanElement>;
   description: string;
-  button: {
+  button?: {
     text: string;
     href: string;
     className?: string;
@@ -159,6 +159,7 @@ export type ActionsSectionProps = {
   subtitle?: string;
   actions: ActionItem[];
   className?: string;
+  titleClassName?: string;
   highlightWordIndex?: number;
 };
 
@@ -271,5 +272,38 @@ export type EmergencyContact = {
 
 export type SOSProps = {
   emergencyContacts?: EmergencyContact[];
+  className?: string;
+};
+
+export type VolunteerProfile = {
+  id: string | number;
+  title: string;
+  tasks: string[];
+};
+
+export type VolunteerProfilesProps = {
+  title?: ReactElement<HTMLSpanElement>;
+  subtitle?: string;
+  profiles: VolunteerProfile[];
+  className?: string;
+};
+
+export type VolunteerCardProps = {
+  profile: VolunteerProfile;
+  className?: string;
+};
+
+export type VolunteerFormData = {
+  lastName: string;
+  firstName: string;
+  email: string;
+  phone: string;
+};
+
+export type VolunteerFormProps = {
+  title?: string;
+  subtitle?: string;
+  onSubmit: (data: VolunteerFormData) => void;
+  isLoading?: boolean;
   className?: string;
 };

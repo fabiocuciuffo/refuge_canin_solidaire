@@ -10,7 +10,7 @@ const ActionCard: React.FC<ActionCardProps> = ({
   className = "",
 }) => (
   <div
-    className={`bg-white rounded-lg shadow-sm overflow-hidden transition-shadow duration-300 text-center ${className}`}
+    className={` ${className} rounded-lg shadow-sm overflow-hidden transition-shadow duration-300 text-center`}
   >
     <div className="aspect-w-16 aspect-h-12 bg-gray-200">
       <img src={image} alt={alt} className="w-full h-64 object-cover" />
@@ -46,14 +46,19 @@ const ActionsSection: React.FC<ActionsSectionProps> = ({
   subtitle = "En parallèle de sa création, le refuge a déjà initié plusieurs actions concrètes : organisation d'événements, sauvetages d'animaux en détresse et soutien à d'autres associations.",
   actions,
   className = "",
+  titleClassName = "",
   highlightWordIndex = 1,
 }) => {
   return (
-    <section className={`bg-white py-16 px-5 ${className}`}>
+    <section className={`py-16 px-5`}>
       <div className=" mx-auto">
-        <div className="mb-12">
-          <h2 className="title3 md:title4 text-dark mb-6">{title}</h2>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-4xl">
+        <div className={`mb-12 ${className}`}>
+          <h2 className={`title3 md:title4 text-dark mb-6 ${titleClassName}`}>
+            {title}
+          </h2>
+          <p
+            className={`text-regular text-gray-600 leading-relaxed ${titleClassName}`}
+          >
             {subtitle}
           </p>
         </div>

@@ -34,12 +34,14 @@ const InfoBanner: React.FC<InfoBannerProps> = ({
             </p>
 
             <div className="mt-2 md:mt-4">
-              <Button
-                className={`${button.className + " " + "bg-blue text-white-custom"}`}
-                link={button.href}
-              >
-                {button.text}
-              </Button>
+              {button && (
+                <Button
+                  className={`${button.className + " " + "bg-blue text-white-custom"}`}
+                  link={button.href}
+                >
+                  {button.text}
+                </Button>
+              )}
             </div>
           </div>
         </div>

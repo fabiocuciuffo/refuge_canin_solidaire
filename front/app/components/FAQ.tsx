@@ -114,7 +114,9 @@ const FAQSection: React.FC<FAQSectionProps> = ({
   };
 
   return (
-    <section className={`bg-gray-50 py-16 px-5 ${className}`}>
+    <section
+      className={`bg-gray-50 py-16 px-5 rounded-2xl overflow-hidden${className}`}
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div>

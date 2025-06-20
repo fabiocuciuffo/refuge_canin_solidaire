@@ -222,3 +222,10 @@
   background-repeat: no-repeat;
   padding: 0.25rem;
 }
+
+.svg_background_red {
+  background-image: url("/vector/Vector-red.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0.25rem;
+}
