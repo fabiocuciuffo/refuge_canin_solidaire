@@ -78,7 +78,7 @@ export default function Home() {
       title: <span>02</span>,
       subtitle: "Remplissez le formulaire",
       description:
-        "En quelques clics, vous indiquez le montant, vos coordonnées et votre préférence de paiement. sNotre formulaire est entièrement sécurisé, et vous avez même la possibilité de dédier votre don à un chien en particulier ou à une action précise (sauvetage, soins, alimentation). sC’est simple, rapide, et totalement transparent.",
+        "En quelques clics, vous indiquez le montant, vos coordonnées et votre préférence de paiement. sNotre formulaire est entièrement sécurisé, et vous avez même la possibilité de dédier votre don à un chien en particulier ou à une action précise (sauvetage, soins, alimentation). C’est simple, rapide, et totalement transparent.",
     },
     {
       title: <span>03</span>,

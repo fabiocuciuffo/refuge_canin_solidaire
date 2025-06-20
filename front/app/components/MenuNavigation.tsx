@@ -99,7 +99,7 @@ const MenuNavigation = () => {
     <nav className="sticky top-0 left-0 justify-between md:items-center w-full h-fit flex py-5 px-4 bg-white z-50">
       <div className="relative flex justify-between md:hidden w-full z-50">
         <Link rel="stylesheet" to="/" className="hover:cursor-pointer">
-          <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
+          <img src="/images/logo_RCS.png" alt="" className="max-w-48" />
         </Link>
         <div className="inline-flex">
           <button
@@ -175,7 +175,7 @@ const MenuNavigation = () => {
       </div>
       <div className="hidden md:flex justify-between w-full z-10">
         <Link rel="stylesheet" to="/" className="hover:cursor-pointer">
-          <img src="/images/logo_RCS.svg" alt="" className="max-w-48" />
+          <img src="/images/logo_RCS.png" alt="" className="max-w-48" />
         </Link>
         <div className="flex me-2">
           <Button link="/adoption" className="whitespace-nowrap me-6">
@@ -187,9 +187,14 @@ const MenuNavigation = () => {
           <Button link="/devenir-benevole" className="whitespace-nowrap me-6">
             Devenir bénévole
           </Button>
-          <Button link="/" className="whitespace-nowrap me-8">
-            Boutique
-          </Button>
+          <a
+            href="https://www.helloasso.com/associations/refuge-canin-solidaire/boutiques/notre-boutique"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap me-8"
+          >
+            <Button className="whitespace-nowrap me-8">Boutique</Button>
+          </a>
           <div className="relative group">
             <Button
               className="flex! items-center justify-center"
