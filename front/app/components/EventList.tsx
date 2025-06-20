@@ -116,7 +116,7 @@ export function EventsList() {
                     >
                       {event.badge}
                     </span>
-                    <Button className="bg-blue hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition duration-300">
+                    <Button className="bg-blue hover:bg-blue-700 text-white px-6 py-2 rounded-lg text-small font-medium transition duration-300">
                       En savoir plus
                     </Button>
                   </div>

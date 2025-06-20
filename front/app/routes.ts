@@ -17,6 +17,7 @@ export default [
     route("a-propos", "routes/a-propos.tsx"),
     route("contact", "routes/contact.tsx"),
     route("ressources", "routes/ressources.tsx"),
+    route("dons", "routes/dons.tsx"),
 
     // API Routes
     route("api/subscribe-newsletter", "routes/api/subscribe-newsletter.ts"),

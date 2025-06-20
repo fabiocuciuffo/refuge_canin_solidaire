@@ -48,10 +48,11 @@ const ActionsSection: React.FC<ActionsSectionProps> = ({
   className = "",
   titleClassName = "",
   highlightWordIndex = 1,
+  containerClassName = "max-w-5xl mx-auto",
 }) => {
   return (
     <section className={`py-16 px-5`}>
-      <div className=" mx-auto">
+      <div className={containerClassName}>
         <div className={`mb-12 ${className}`}>
           <h2 className={`title3 md:title4 text-dark mb-6 ${titleClassName}`}>
             {title}

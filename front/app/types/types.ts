@@ -161,6 +161,7 @@ export type ActionsSectionProps = {
   className?: string;
   titleClassName?: string;
   highlightWordIndex?: number;
+  containerClassName?: string;
 };
 
 export type ActionCardProps = {

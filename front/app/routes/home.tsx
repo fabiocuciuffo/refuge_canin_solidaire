@@ -8,7 +8,6 @@ import InfoBanner from "~/components/InfoBanner";
 import ImageBanner from "~/components/ImageBanner";
 import DonBanner from "~/components/DonBanner";
 import type { ReactElement } from "react";
-import { ContactForm } from "~/components/ContactForm";
 import FAQSection, { faqData } from "~/components/FAQ";
 
 export function meta({}: MetaArgs) {
