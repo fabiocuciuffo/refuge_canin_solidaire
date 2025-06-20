@@ -265,7 +265,7 @@ Placé dans le couloir de la mort, son sort était presque scellé. On est inter
       <ImageBanner
         title={
           <span>
-            Découvrez le
+            Découvrez le{" "}
             <span className="svg_background">refuge</span>
           </span>
         }

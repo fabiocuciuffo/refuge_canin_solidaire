@@ -30,7 +30,7 @@ export default function ImageBanner({
           <img
             src={image.src}
             alt={image.alt}
-            className="w-full h-[80vh] object-cover rounded-[20px]"
+            className="w-full md:h-[50vh] h-[30vh] object-cover rounded-[20px] "
           />
         </div>
       </div>
