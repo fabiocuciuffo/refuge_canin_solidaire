@@ -3,7 +3,6 @@ import type { LoaderFunctionArgs } from "react-router";
 import Banner from "~/components/Banner";
 import { ArticleCard } from "~/components/Card";
 import { articlesService } from "~/services/articlesService";
-import { category } from "../../../sanity/schemaTypes/postsType";
 import type { Article } from "~/types/types";
 
 export const meta = () => {
@@ -12,6 +11,15 @@ export const meta = () => {
     { name: "description", content: "Articles du Refuge Canin Solidaire" },
   ];
 };
+
+const category = [
+  {title: 'Adoption', value: 'Adoption'},
+  {title: 'Education', value: 'Education'},
+  {title: 'Le Refuge', value: 'Le Refuge'},
+  {title: 'Sensibilisation', value: 'Sensibilisation'},
+  {title: 'Événements', value: 'Événements'},
+  {title: 'Vie sociale', value: 'Vie sociale'},
+]
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const url = new URL(request.url);
