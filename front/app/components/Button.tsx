@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 
 function Button ({children, className, link, onClickCallback}: {children: React.ReactNode, className?: string, link?: string, onClickCallback?: (e: React.MouseEvent<HTMLButtonElement>) => void}) {
-  const sharedClasses = "inline-block py-3 w-full text-center rounded-lg text-regular text-heavy transition-all ease-in-out duration-100 hover:opacity-55"
+  const sharedClasses = "inline-block py-3 w-full text-center rounded-lg text-regular text-heavy transition-all ease-in-out duration-100 hover:opacity-55 cursor-pointer"
   if (link) {
     return(
       <Link to={link} className={sharedClasses + " " + className}>
