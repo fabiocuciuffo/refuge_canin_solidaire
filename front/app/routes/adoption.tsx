@@ -7,7 +7,7 @@ import type { ReactElement } from "react";
 import type { ActionItem } from "~/types/types";
 import FAQSection from "~/components/FAQ";
 import { faqData } from "~/components/FAQ";
-import ActionsSection from "~/components/ActionsSections";
+import ActionsSection from "~/components/actionsSections";
 
 export default function Adoptions() {
   const cinqCartesData: [

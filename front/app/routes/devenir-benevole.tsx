@@ -1,4 +1,4 @@
-import ActionsSection from "~/components/ActionsSections";
+import ActionsSection from "~/components/actionsSections";
 import Banner from "../components/Banner";
 import { BenevolatForm } from "~/components/BenevolatSubmitForm";
 import type { VolunteerProfile } from "../types/types";

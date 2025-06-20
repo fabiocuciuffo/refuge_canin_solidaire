@@ -8,7 +8,7 @@ import type {
   ValueItem,
 } from "../types/types";
 import TimelineSection from "./Timeline";
-import ActionsSection from "~/components/ActionsSections";
+import ActionsSection from "~/components/actionsSections";
 import Marquee from "~/components/Marquee";
 import GallerySection from "~/components/Gallery";
 
